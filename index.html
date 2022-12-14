@@ -1,0 +1,106 @@
+<html>
+<head></head>
+<body style="overflow:hidden;">
+<div>
+<img src="https://us.bravecto.com/wp-content/uploads/sites/188/2022/04/cats-bravecto-for-cats.png?w=283" id="cat" style="width:500px;  display: block;
+  margin-left: auto;
+  margin-right: auto;margin-top:350px;">
+</div>
+  <script>
+function() {
+
+const cat = document.getElementById('cat');
+
+const actions = new Array('scale(', 'rotate(', 'skew(', 'translate(', 'scale3D(', 'rotate3D')
+
+function getAction(type) {
+    if (type == 'skew(') {
+        return 'skew(' + Math.floor(Math.random() * 100) + 'deg' + ', ' + Math.floor(Math.random() * 100) + 'deg' + ')'
+    } else if (type == 'rotate(') {
+        return 'rotate(' + Math.floor(Math.random() * 360) + 'deg' + ')'
+    } else if (type == 'scale(') {
+        return 'scale(' + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ")"
+    } else if (type == 'translate(') {
+        return 'translate(' + Math.floor(Math.random() * 200) + 'px' + ", " + Math.floor(Math.random() * 200) + 'px' + ")"
+    } else if (type == 'scale3D(') {
+        return 'scale3D(' + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) ")"
+    } else {
+        return 'rotate3D(' + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 360) + 'deg' + ")"
+    }
+}
+  
+document.onkeydown = function() {
+switch (event.key) {
+  case 's':
+    cat.animate([
+    {
+  getAction('scale(')
+    },
+    
+    {
+   getAction('scale(')
+    }
+  ], 1000)
+  break;
+case 'd':
+    cat.animate([
+    {
+  getAction('rotate(')
+    },
+    
+    {
+   getAction('rotate(')
+    }
+  ], 1000)
+  break;
+case 'f':
+    cat.animate([
+    {
+  getAction('skew(')
+    },
+    
+    {
+   getAction('skew(')
+    }
+  ], 1000)
+  break;
+case 'j':
+    cat.animate([
+    {
+  getAction('translate(')
+    },
+    
+    {
+   getAction('translate(')
+    }
+  ], 1000)
+  break;
+case 'k':
+  cat.animate([
+    {
+  getAction('scale3D(')
+    },
+    
+    {
+   getAction('scale3D(')
+    }
+  ], 1000)
+  break;
+case 'l':
+  cat.animate([
+    {
+  getAction('rotate3D(')
+    },
+    
+    {
+   getAction('rotate3D(')
+    }
+  ], 1000)
+  break;
+}
+}
+
+}
+</script>
+</body>
+</html>
