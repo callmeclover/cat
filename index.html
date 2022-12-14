@@ -7,7 +7,7 @@
   <script>
 const cat = document.getElementById('cat');
 
-const actions = new Array('scale(', 'rotate(', 'skew(', 'translate(', 'scale3D(', 'rotate3D')
+const actions = new Array('scale(', 'rotate(', 'skew(', 'translate(', 'scale3D(', 'rotate3D(')
 
 function getAction(type) {
     if (type == 'skew(') {
@@ -20,8 +20,23 @@ function getAction(type) {
         return 'translate(' + Math.floor(Math.random() * 200) + 'px' + ", " + Math.floor(Math.random() * 200) + 'px' + ")"
     } else if (type == 'scale3D(') {
         return 'scale3D(' + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ")"
-    } else {
+    } else if (type == 'rotate3D(') {
         return 'rotate3D(' + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 360) + 'deg' + ")"
+    } else {
+        let currAct = actions[Math.floor(Math.random() * 6)]
+         if (currAct == 'scale(') {
+        return 'scale(' + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ")"
+         } else if (currAct == 'rotate(') {
+        return 'rotate(' + Math.floor(Math.random() * 360) + 'deg' + ')'
+         } else if (currAct == 'skew(') {
+        return 'skew(' + Math.floor(Math.random() * 100) + 'deg' + ', ' + Math.floor(Math.random() * 100) + 'deg' + ')'
+         } else if (currAct == 'translate(') {
+        return 'translate(' + Math.floor(Math.random() * 200) + 'px' + ", " + Math.floor(Math.random() * 200) + 'px' + ")"
+         } else if (currAct == 'scale3D(') {
+        return 'scale3D(' + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ")"
+         } else {
+        return 'rotate3D(' + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 360) + 'deg' + ")"
+         }
     }
 }
   
@@ -90,6 +105,17 @@ case 'l':
     
     {
    transform: getAction('rotate3D(')
+    }
+  ], 1000)
+  break;
+  case 'g', 'h':
+      cat.animate([
+    {
+  transform: getAction('random(')
+    },
+    
+    {
+   transform: getAction('random(')
     }
   ], 1000)
   break;
