@@ -108,7 +108,18 @@ case 'l':
     }
   ], 1000)
   break;
-  case 'g', 'h':
+  case 'g':
+      cat.animate([
+    {
+  transform: getAction('random(')
+    },
+    
+    {
+   transform: getAction('random(')
+    }
+  ], 1000)
+  break;
+  case 'h':
       cat.animate([
     {
   transform: getAction('random(')
