@@ -113,7 +113,7 @@ const audioElement = document.querySelector("audio");
 const track = audioContext.createMediaElementSource(audioElement);
 track.connect(audioContext.destination);
 
-const actions = new Array('scale(', 'rotate(', 'skew(', 'translate(', 'scale3D(', 'rotate3D(')
+const actions = new Array('scale(', 'rotate(', 'skew(', 'translate(', 'scale3D(', 'rotate3D(', 'translate3D(')
 
 function getAction(type) {
     if (type == 'skew(') {
@@ -128,8 +128,10 @@ function getAction(type) {
         return 'scale3D(' + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ")"
     } else if (type == 'rotate3D(') {
         return 'rotate3D(' + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 360) + 'deg' + ")"
+    } else if (type == 'translate3D(') {
+        return 'translate3D(' + Math.floor(Math.random() * 200) + "px, " + Math.floor(Math.random() * 200) + "px, " + Math.floor(Math.random() * 200) + "px, " + ")"
     } else {
-        let currAct = actions[Math.floor(Math.random() * 6)]
+        let currAct = actions[Math.floor(Math.random() * 7)]
          if (currAct == 'scale(') {
         return 'scale(' + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ")"
          } else if (currAct == 'rotate(') {
@@ -284,6 +286,94 @@ case 'l':
     
     {
    transform: getAction('random(')
+    }
+  ], 1000)
+  break;
+  case 'w':
+    cat.animate([
+    {
+  transform: getAction('scale(')
+    },
+    
+    {
+   transform: 'scale(1, 1)'
+    }
+  ], 1000)
+  break;
+case 'e':
+    cat.animate([
+    {
+  transform: getAction('rotate(')
+    },
+    
+    {
+   transform: getAction('rotate(')
+    }
+  ], 1000)
+  break;
+case 'r':
+    cat.animate([
+    {
+  transform: getAction('skew(')
+    },
+    
+    {
+   transform: 'skew(0deg, 0deg)'
+    }
+  ], 1000)
+  break;
+case 'i':
+    cat.animate([
+    {
+  transform: getAction('translate(')
+    },
+    
+    {
+   transform: 'translate(0px, 0px)'
+    }
+  ], 1000)
+  break;
+case 'o':
+  cat.animate([
+    {
+  transform: getAction('scale3D(')
+    },
+    
+    {
+   transform: 'scale3D(1, 1, 1)'
+    }
+  ], 1000)
+  break;
+case 'p':
+  cat.animate([
+    {
+  transform: getAction('rotate3D(')
+    },
+    
+    {
+   transform: 'rotate3D(0, 0, 0, 0deg)'
+    }
+  ], 1000)
+  break;
+      case 'q':
+      cat.animate([
+    {
+  transform: getAction('translate3D(')
+    },
+    
+    {
+   transform: 'translate3D(0px, 0px, 0px)'
+    }
+  ], 1000)
+  break;
+      case 'a':
+      cat.animate([
+    {
+  transform: getAction('translate3D(')
+    },
+    
+    {
+   transform: getAction('translate3D(')
     }
   ], 1000)
   break;
