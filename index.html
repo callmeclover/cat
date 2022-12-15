@@ -44,7 +44,7 @@ function getAction(type) {
     } else if (type == 'rotate3D(') {
         return 'rotate3D(' + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 360) + 'deg' + ")"
     } else if (type == 'translate3D(') {
-        return 'translate3D(' + Math.floor(Math.random() * 200) + "px, " + Math.floor(Math.random() * 200) + "px, " + Math.floor(Math.random() * 200) + "px" + ")"
+        return 'perspective(' + Math.floor(Math.random() * 500) + "px" + ') '+ 'translate3D(' + Math.floor(Math.random() * 200) + "px, " + Math.floor(Math.random() * 200) + "px, " + Math.floor(Math.random() * 200) + "px" + ")"
     } else {
         let currAct = actions[Math.floor(Math.random() * 7)]
          if (currAct == 'scale(') {
@@ -57,8 +57,10 @@ function getAction(type) {
         return 'translate(' + Math.floor(Math.random() * 200) + 'px' + ", " + Math.floor(Math.random() * 200) + 'px' + ")"
          } else if (currAct == 'scale3D(') {
         return 'scale3D(' + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ")"
-         } else {
+         } else if (currAct == 'rotate3D') {
         return 'rotate3D(' + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 10) + ", " + Math.floor(Math.random() * 360) + 'deg' + ")"
+         } else {
+          return 'perspective(' + Math.floor(Math.random() * 500) + "px" + ') '+ 'translate3D(' + Math.floor(Math.random() * 200) + "px, " + Math.floor(Math.random() * 200) + "px, " + Math.floor(Math.random() * 200) + "px" + ")"
          }
     }
 }
