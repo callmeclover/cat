@@ -13,6 +13,157 @@
   margin-left: auto;
   margin-right: auto;position:relative;top:100px;left:400px;">
 
+<button id="q" onclick="
+cat.animate([
+    {
+  transform: getAction('translate3D(')
+    },
+    
+    {
+   transform: 'translate3D(0, 0, 0)'
+    }
+  ], 1000)">q</button>  
+<button id="w" onclick="
+cat.animate([
+    {
+  transform: getAction('scale(')
+    },
+    
+    {
+   transform: 'scale(0, 0)'
+    }
+  ], 1000)">w</button>  
+<button id="e" onclick="
+cat.animate([
+    {
+  transform: getAction('rotate(')
+    },
+    
+    {
+   transform: 'rotate(0)'
+    }
+  ], 1000)">e</button>  
+<button id="r" onclick="
+cat.animate([
+    {
+  transform: getAction('skew(')
+    },
+    
+    {
+   transform: 'skew(0, 0)'
+    }
+  ], 1000)">r</button>  
+<button id="i" onclick="
+cat.animate([
+    {
+  transform: getAction('translate(')
+    },
+    
+    {
+   transform: 'translate(0, 0)'
+    }
+  ], 1000)">i</button>  
+<button id="o" onclick="
+cat.animate([
+    {
+  transform: getAction('scale3D(')
+    },
+    
+    {
+   transform: 'scale3D(0, 0, 0)'
+    }
+  ], 1000)">o</button>  
+<button id="p" onclick="
+cat.animate([
+    {
+  transform: getAction('rotate3D(')
+    },
+    
+    {
+   transform: 'rotate3D(0, 0, 0, 0)'
+    }
+  ], 1000)">p</button>  
+<button id="a" onclick="
+cat.animate([
+    {
+  transform: getAction('translate3D(')
+    },
+    
+    {
+   transform: getAction('translate3D(')
+    }
+  ], 1000)">a</button>  
+<button id="s" onclick="
+cat.animate([
+    {
+  transform: getAction('scale(')
+    },
+    
+    {
+   transform: getAction('scale(')
+    }
+  ], 1000)">s</button>  
+<button id="d" onclick="
+cat.animate([
+    {
+  transform: getAction('rotate(')
+    },
+    
+    {
+   transform: getAction('rotate(')
+    }
+  ], 1000)">d</button>  
+<button id="f" onclick="
+cat.animate([
+    {
+  transform: getAction('skew(')
+    },
+    
+    {
+   transform: getAction('skew(')
+    }
+  ], 1000)">f</button>  
+<button id="gh" onclick="
+cat.animate([
+    {
+  transform: getAction('random(')
+    },
+    
+    {
+   transform: getAction('random(')
+    }
+  ], 1000)">g/h</button>  
+<button id="j" onclick="
+cat.animate([
+    {
+  transform: getAction('translate(')
+    },
+    
+    {
+   transform: getAction('translate((')
+    }
+  ], 1000)">j</button>  
+<button id="k" onclick="
+cat.animate([
+    {
+  transform: getAction('scale3D(')
+    },
+    
+    {
+   transform: getAction('scale3D(')
+    }
+  ], 1000)">k</button>
+<button id="l" onclick="
+cat.animate([
+    {
+  transform: getAction('rotate3D(')
+    },
+    
+    {
+   transform: getAction('rotate3D(')
+    }
+  ], 1000)">l</button>  
+
   <script>
 const cat = document.getElementById('cat');
 const autoSwitch = document.getElementById('autoinput')
@@ -296,6 +447,25 @@ case 'p':
   break;
 }
 }
+
+// mobile users var
+const q = document.getElementById('q')
+const w = document.getElementById('w')
+const e = document.getElementById('e')
+const r = document.getElementById('r')
+const i = document.getElementById('i')
+const o = document.getElementById('o')
+const p = document.getElementById('p')
+const a = document.getElementById('a')
+const s = document.getElementById('s')
+const d = document.getElementById('d')
+const f = document.getElementById('f')
+const gh = document.getElementById('g/h')
+const j = document.getElementById('j')
+const k = document.getElementById('k')
+const l = document.getElementById('l')
+
+// mobile distort
 </script>
 
 
