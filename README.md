@@ -1,2 +1,2 @@
 # cat
-arrow keys.
+just press qweriopasdfghjkl and vibe...
