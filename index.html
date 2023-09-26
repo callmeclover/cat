@@ -2,16 +2,19 @@
     <title>callmeclover -- cat</title>
   </head>
 <body id="body" style="overflow:hidden;">
-<div id="menu" style="background-color: rgba(30, 30, 30, 0.5); color: white; border-radius: 0.5em; right: 20px; width: 230px; height: 100px; text-align: center; position: relative;">
+<div id="menu" onmouseover="this.animate([
+    {
+   right: '400px'
+    }
+], 2500)
+this.style.right = '400px'" style="background-color: rgba(30, 30, 30, 0.5); color: white; border-radius: 0.5em; right: 20px; width: 230px; height: 100px; text-align: center; position: relative;">
 <input type="checkbox" style="border-radius:0.5em;" id="autoinput">
 <br>
   <textarea id="link" style="resize:none;border-radius: 0.5em; background-color: rgba(20, 20, 20, 0.75); width: 205px; height: 75px;"></textarea>
   </div>
-  <audio crossorigin="" src="https://youtu.be/QH2-TGUlwu4"></audio>
 <img alt="Oops! Either the image couldn't load, or this isnt a valid link, reload and try again!" src="https://us.bravecto.com/wp-content/uploads/sites/188/2022/04/cats-bravecto-for-cats.png?w=283" id="cat" style="width:300px;  display: block;
   margin-left: auto;
   margin-right: auto;position:relative;top:100px;left:50px;">
-
 
 
 
@@ -173,14 +176,7 @@ const autoSwitch = document.getElementById('autoinput')
 const url = document.getElementById('link')
 const setMenu = document.getElementById('menu')
 const body = document.getElementById('body')
-const audioContext = new AudioContext();
 
-// get the audio element
-const audioElement = document.querySelector("audio");
-
-// pass it into the audio context
-const track = audioContext.createMediaElementSource(audioElement);
-track.connect(audioContext.destination);
 
 const actions = new Array('scale(', 'rotate(', 'skew(', 'translate(', 'scale3D(', 'rotate3D(', 'translate3D(')
 
@@ -240,20 +236,6 @@ loop()
 }, 1000)
 }
 loop()
-
-// close menu
-document.onkeyup = function() {
-switch (event.key) {
-  case 'Tab':
-  setMenu.animate([
-    {
-   right: '400px'
-    }
-], 2500)
-setMenu.style.right = '400px'
-  break;
-}
-}
 
 // actually distort it
 document.onkeydown = function() {
